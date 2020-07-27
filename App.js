@@ -1,14 +1,18 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import 'babel-plugin-tailwind-rn/dist/useTailwind'
+import TailwindProvider from 'babel-plugin-tailwind-rn/dist/useTailwind'
 
-export default function App() {
+function App() {
   return (
-    <View className="bg-blue-600 p-10 h-full w-full">
-      <Text className="text-white">Open up App.js to start working on your app!</Text>
+    <View className="bg-blue-400 lg:bg-red-400">
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
+
+export default TailwindProvider(App)
 
 const styles = StyleSheet.create({
   container: {
