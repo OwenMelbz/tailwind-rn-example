@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import TailwindProvider from 'babel-plugin-tailwind-rn/dist/useTailwind'
+import useTailwind from 'babel-plugin-tailwind-rn/dist/useTailwind'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-export default TailwindProvider(App)
+export default useTailwind(App)
 
 const styles = StyleSheet.create({
   container: {
